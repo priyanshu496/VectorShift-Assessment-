@@ -16,7 +16,8 @@ export const SubmitButton = () => {
         });
 
         try {
-            const response = await fetch('http://localhost:8000/pipelines/parse', {
+            // 👇 UPDATED: Pointing to your live Render backend!
+            const response = await fetch('https://vectorshift-assessment-backend-lk32.onrender.com/pipelines/parse', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nodes, edges })
